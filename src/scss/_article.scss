@@ -1,0 +1,41 @@
+.ArticleSection {
+	margin: 30px 7.5%;
+	background: white;
+	border: 3px solid slategrey;
+	border-radius: 6px;
+	padding: 8px 24px;
+}
+
+h3.ArticleHeader {
+	font-size: 34px;
+	font-family: $header-font;
+	font-weight: 700;
+
+	&.center {
+		text-align: center;
+	}
+}
+
+.ArticleSection p,
+ol {
+	font-size: 18px;
+	line-height: 160%;
+}
+
+img {
+	display: block;
+	border: 3px ridge slategrey;
+	border-radius: 4px;
+	margin: 10px auto;
+	object-fit: contain;
+	filter: drop-shadow(8px 6px 6px rgb(61, 61, 61));
+}
+
+h3.CenterHeader {
+	font-size: 24px;
+	font-family: $header-font;
+}
+
+button {
+	font-size: 22px;
+}

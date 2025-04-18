@@ -5,14 +5,19 @@
   "homepage": "https://wither19.github.io/brine-pool-project/",
   "type": "module",
   "scripts": {
-    "predeploy" : "bun run build",
-    "deploy" : "gh-pages -d dist",
+    "predeploy": "bun run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.5",
+    "@fontsource/poppins": "^5.2.5",
+    "@fontsource/roboto": "^5.2.5",
+    "@fontsource/ubuntu": "^5.2.5",
+    "@fontsource/ubuntu-sans": "^5.2.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -26,6 +31,7 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "gh-pages": "^6.3.0",
     "globals": "^16.0.0",
+    "sass-embedded": "^1.86.3",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
     "vite": "^6.3.1"

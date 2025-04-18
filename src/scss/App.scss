@@ -1,0 +1,19 @@
+@import "_variables.scss";
+
+@import "_general.scss";
+
+@import "_article.scss";
+@import "_citation.scss";
+
+li {
+	font-size: 16px;
+	margin: 10px 7.5%;
+}
+
+.FunFacts li {
+	font-size: 18px !important;
+}
+
+label {
+	user-select: none;
+}

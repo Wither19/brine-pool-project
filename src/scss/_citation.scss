@@ -1,0 +1,53 @@
+h3.CitationHeader {
+  display: block;
+  font-size: 20px;
+  margin-left: 9%;
+  font-family: $header-font;
+  font-weight: 700;
+}
+
+
+a.CitationRef {
+  font-size: 18px;
+  display: block;
+  color: rgb(75, 102, 255) !important;
+  text-decoration: none;
+}
+
+a.CitationRef:hover {
+  color: rgb(44, 70, 214);
+}
+
+@keyframes citation-blink {
+  0% {
+    color: inherit;
+    background-color: initial;
+  }
+
+  50% {
+    color: white !important;
+    background-color: rebeccapurple;
+  }
+
+  100% {
+    color: inherit;
+    background-color: initial;
+  }
+}
+
+.animated {
+  animation: citation-blink 750ms linear 50ms;
+}
+
+a:not(.animated) {
+  color: rgb(75, 102, 255);
+}
+
+a:visited:not(.animated) {
+  color: rgb(119, 44, 218);
+}
+
+a.CitationLink:visited {
+  color: rgb(75, 102, 255) !important;
+  text-decoration: none;
+}
