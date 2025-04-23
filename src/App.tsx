@@ -81,6 +81,9 @@ function App() {
 					genus[selectedAnimal],
 					true
 				)} ${species[selectedAnimal]})`}>
+				<label>
+					Shorten Animal Genus?
+				</label>
 				<input
 					type="checkbox"
 					id="shorten-genus"
