@@ -79,7 +79,7 @@ function App() {
 			<ProjectArticle
 				header={`${selectedAnimal} (${shortenGenus(
 					genus[selectedAnimal],
-					true
+					isShortened
 				)} ${species[selectedAnimal]})`}>
 				<label>
 					Shorten Animal Genus?
