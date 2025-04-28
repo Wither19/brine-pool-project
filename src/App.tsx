@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./scss/App.scss";
 
 import ProjectArticle from "./components/ProjectArticle";
+import LinkedImg from "./components/LinkedImg";
 
 type Animal = "Mussel" | "Tube Worm" | "Hagfish";
 
@@ -92,18 +93,18 @@ function App() {
         {info[selectedAnimal]}
       </ProjectArticle>
       <ProjectArticle header="What Makes a Brine Pool Unique?">
-        <img
+        <LinkedImg
           width="65%"
-          src="https://static.wixstatic.com/media/a27d24_c9c7548753cf4b47b93f9763a6e7ff66~mv2.jpg/v1/fit/w_364,h_738,q_90,enc_avif,quality_auto/a27d24_c9c7548753cf4b47b93f9763a6e7ff66~mv2.jpg"
+          url="https://static.wixstatic.com/media/a27d24_c9c7548753cf4b47b93f9763a6e7ff66~mv2.jpg/v1/fit/w_364,h_738,q_90,enc_avif,quality_auto/a27d24_c9c7548753cf4b47b93f9763a6e7ff66~mv2.jpg"
         />
         The brine pool is a hole that appears as its own lake under the water, because it is much
         more saline than the surrounding seawater. These brine pools are so salty, they are fatally
         toxic for nearly all marine life, so nothing lives directly on, or in them.
       </ProjectArticle>
       <ProjectArticle header="Some Features of Brine Pools">
-        <img
+        <LinkedImg
           width="60%"
-          src="https://news.miami.edu/rosenstiel/_assets/images/images-stories/2022/07/rare-deep-sea-brine-pools-discovered-in-red-sea-940x529.jpeg
+          url="https://news.miami.edu/rosenstiel/_assets/images/images-stories/2022/07/rare-deep-sea-brine-pools-discovered-in-red-sea-940x529.jpeg
 "
         />
         The area surrounding brine pools are usually around 19° C (66 °F). This is relatively warm
