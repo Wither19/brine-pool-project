@@ -3,8 +3,10 @@ import "./scss/App.scss";
 
 import ProjectArticle from "./components/ProjectArticle";
 import LinkedImg from "./components/LinkedImg";
+import Cite from "./components/Cite";
 
 type Animal = "Mussel" | "Tube Worm" | "Hagfish";
+type Citation = { txt: string; link: string };
 
 const info = {
   Mussel:
@@ -32,6 +34,21 @@ const species = {
   "Tube Worm": "luymes",
   Hagfish: "glutinosa",
 };
+
+const cites: Citation[] = [
+  {
+    txt: "Brine pool: Hot tub of despair. Deep Ocean Education Project. (2022, February 18).",
+    link: "https://deepoceaneducation.org/resources/brine-pool-hot-tub-of-despair/",
+  },
+  {
+    txt: "Brine pool ecosystems explained. Natural World Facts. (n.d.).",
+    link: "https://www.naturalworldfacts.com/brine-pool-ecosystems",
+  },
+  {
+    txt: "Vera, M.L., Torres, W.R., Galli, C.I. et al. Environmental impact of direct lithium extraction from brines. Nat Rev Earth Environ 4, 149–165 (2023).",
+    link: "https://doi.org/10.1038/s43017-022-00387-5",
+  },
+];
 
 const shortenGenus = (genus: string, shorten: boolean) => {
   let g: typeof genus = genus;
@@ -96,6 +113,7 @@ function App() {
         <LinkedImg
           width="65%"
           url="https://static.wixstatic.com/media/a27d24_c9c7548753cf4b47b93f9763a6e7ff66~mv2.jpg/v1/fit/w_364,h_738,q_90,enc_avif,quality_auto/a27d24_c9c7548753cf4b47b93f9763a6e7ff66~mv2.jpg"
+          showText
         />
         The brine pool is a hole that appears as its own lake under the water, because it is much
         more saline than the surrounding seawater. These brine pools are so salty, they are fatally
@@ -106,6 +124,7 @@ function App() {
           width="60%"
           url="https://news.miami.edu/rosenstiel/_assets/images/images-stories/2022/07/rare-deep-sea-brine-pools-discovered-in-red-sea-940x529.jpeg
 "
+          showText
         />
         The area surrounding brine pools are usually around 19° C (66 °F). This is relatively warm
         considering they are found from 1,000 to 3,000 m under the ocean, where there is virtually
@@ -114,6 +133,13 @@ function App() {
       <ProjectArticle header="What is the Biggest Threat to Brine Pools?">
         The biggest threat to brine pools specifically, is companies extracting lithium from the
         pools, which risks the ecosystem.
+      </ProjectArticle>
+      <ProjectArticle header="Works Cited">
+        {cites.map((citation, i) => (
+          <Cite key={`citation-${i}`} url={citation.link}>
+            {citation.txt}
+          </Cite>
+        ))}
       </ProjectArticle>
     </>
   );

@@ -54,3 +54,8 @@ table :is(th, td) {
 th {
   transition: background-color 200ms;
 }
+
+figcaption {
+  word-wrap: break-word;
+  margin: 20px 20%;
+}
